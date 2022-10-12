@@ -11,7 +11,7 @@
 	<groupId>dev.danvega</groupId>
 	<artifactId>spring-blog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hosted-blog</name>
+	<name>spring-blog</name>
 	<description>Sample Blog Project used for hosting demos</description>
 	<properties>
 		<java.version>17</java.version>
