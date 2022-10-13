@@ -1,7 +1,5 @@
 package dev.danvega.blog.model;
 
-import java.time.LocalDateTime;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceCreator;
@@ -31,13 +29,13 @@ public final class Post {
     }
 
     @PersistenceCreator
-    public Post(String title, String content, LocalDateTime publishedOn, LocalDateTime updatedOn, Collection<Comment> comments, AggregateReference<Author,Integer> author) {
+    public Post(String title, String content, LocalDateTime publishedOn, LocalDateTime updatedOn, AggregateReference<Author,Integer> author, Collection<Comment> comments) {
         this.title = title;
         this.content = content;
         this.publishedOn = publishedOn;
         this.updatedOn = updatedOn;
-        comments.forEach(this::addComment);
         this.author = author;
+        comments.forEach(this::addComment);
     }
 
     public Integer getId() {

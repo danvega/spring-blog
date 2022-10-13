@@ -19,13 +19,6 @@ class AuthorRepositoryTest {
     @Autowired
     AuthorRepository authors;
 
-    AggregateReference<Author,Integer> author;
-
-    @BeforeEach
-    void setUp() {
-        author = AggregateReference.to(authors.save(new Author(null, "Dan", "Vega", "danvega@gmail.com", "dvega")).id());
-    }
-
     @Test
     void shouldReturnAllAuthors() {
         long count = StreamSupport.stream(authors.findAll().spliterator(), false).count();
