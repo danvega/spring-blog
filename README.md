@@ -118,3 +118,4 @@ jobs:
 - [https://www.digitalocean.com](https://www.digitalocean.com/)
 - [https://aws.amazon.com](https://aws.amazon.com/)
 - [https://cloud.google.com](https://cloud.google.com/)
+- [https://www.redhat.com/en/technologies/cloud-computing/openshift](OpenShift)
