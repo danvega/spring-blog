@@ -1,5 +1,6 @@
 package dev.danvega.blog.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceCreator;
@@ -29,6 +30,7 @@ public final class Post {
     }
 
     @PersistenceCreator
+    @JsonCreator
     public Post(String title, String content, LocalDateTime publishedOn, LocalDateTime updatedOn, AggregateReference<Author,Integer> author, Collection<Comment> comments) {
         this.title = title;
         this.content = content;
