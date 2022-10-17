@@ -2,6 +2,8 @@ package dev.danvega.blog.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import dev.danvega.blog.model.json.AuthorDeserializer;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceCreator;
 import org.springframework.data.jdbc.core.mapping.AggregateReference;
@@ -31,7 +33,7 @@ public final class Post {
 
     @PersistenceCreator
     @JsonCreator
-    public Post(String title, String content, LocalDateTime publishedOn, LocalDateTime updatedOn, AggregateReference<Author,Integer> author, Collection<Comment> comments) {
+    public Post(String title, String content, LocalDateTime publishedOn, LocalDateTime updatedOn, AggregateReference<Author,Integer> author, Set<Comment> comments) {
         this.title = title;
         this.content = content;
         this.publishedOn = publishedOn;

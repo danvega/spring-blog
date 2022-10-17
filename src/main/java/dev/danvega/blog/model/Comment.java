@@ -1,5 +1,6 @@
 package dev.danvega.blog.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import org.springframework.data.annotation.PersistenceCreator;
 import org.springframework.data.annotation.Transient;
 
@@ -21,10 +22,12 @@ public final class Comment {
     }
 
     @PersistenceCreator
-    public Comment(String name, String content, LocalDateTime publishedOn) {
+    @JsonCreator
+    public Comment(String name, String content, LocalDateTime publishedOn, LocalDateTime updatedOn) {
         this.name = name;
         this.content = content;
         this.publishedOn = publishedOn;
+        this.updatedOn = updatedOn;
     }
 
     public String getName() {
