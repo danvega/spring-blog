@@ -55,6 +55,11 @@ discussed some different options for taking your Spring Boot application to prod
 
 ![Spring Office Hours: Episode 15 - Spring to Production](https://tanzu.vmware.com/developer/tv/spring-office-hours/0015/images/0015.png)
 
+### Local Development
+
+When working on this application locally you will need Docker Desktop installed. To start an instance of PostgreSQL run the Docker
+Compose file located in the root of the project. 
+
 ### Azure Spring Apps
 
 Azure Spring Apps is a platform as a service (PaaS) for Spring developers. Manage the lifecycle of your Spring Boot applications with 
@@ -118,4 +123,4 @@ jobs:
 - [https://www.digitalocean.com](https://www.digitalocean.com/)
 - [https://aws.amazon.com](https://aws.amazon.com/)
 - [https://cloud.google.com](https://cloud.google.com/)
-- [https://www.redhat.com/en/technologies/cloud-computing/openshift](OpenShift)
+- [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)

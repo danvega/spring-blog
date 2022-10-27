@@ -1,3 +1,4 @@
+
 management:
   endpoints:
     web:
@@ -6,15 +7,13 @@ management:
   info:
     env:
       enabled: true
-spring:
-  datasource:
-    url: jdbc:postgresql://dvega.postgres.database.azure.com:5432/spring-blog?sslmode=require
-    username: '${DB_USERNAME}'
-    password: '${DB_PASSWORD}'
-    name: spring-blog
+
 info:
   application:
     name: spring-blog
     description: A blog with articles about The Spring Framework.
     author: Dan Vega
     version: '@project.version@'
+spring:
+  profiles:
+    active: dev
