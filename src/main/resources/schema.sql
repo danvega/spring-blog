@@ -1,5 +1,5 @@
 -- author
-create table Author(
+create table IF NOT EXISTS Author(
     id serial primary key,
     first_name varchar(100) not null,
     last_name varchar(100) not null,
@@ -8,7 +8,7 @@ create table Author(
 );
 
 -- post
-create table Post (
+create table IF NOT EXISTS Post (
     id serial primary key ,
     version int,
     title varchar(255) not null,
@@ -20,7 +20,7 @@ create table Post (
 );
 
 -- comment
-create table Comment(
+create table IF NOT EXISTS Comment(
     post int not null,
     name varchar(100) not null,
     content text not null,
