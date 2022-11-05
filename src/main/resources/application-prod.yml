@@ -4,3 +4,7 @@ spring:
     username: ${PROD_DB_USERNAME}
     password: ${PROD_DB_PASSWORD}
     name: spring-blog
+
+  sql:
+    init:
+      mode: always # you won't do this in prod, i'm just doing this for demo purposes
