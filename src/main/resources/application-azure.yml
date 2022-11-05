@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://dvega.postgres.database.azure.com:5432/spring-blog?sslmode=require
-    username: '${DB_USERNAME}'
-    password: '${DB_PASSWORD}'
-    name: spring-blog
