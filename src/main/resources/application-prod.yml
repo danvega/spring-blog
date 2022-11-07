@@ -7,4 +7,4 @@ spring:
 
   sql:
     init:
-      mode: always # you won't do this in prod, i'm just doing this for demo purposes
+      mode: always # you won't do this in prod, I'm just doing this for demo purposes
